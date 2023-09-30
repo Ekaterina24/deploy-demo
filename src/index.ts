@@ -1,7 +1,7 @@
 import express from 'express';
+import helmet from 'helmet'
 
 const app = express();
-const helmet = require('helmet');
 const port = process.env.PORT || 3000;
 
 app.use(
