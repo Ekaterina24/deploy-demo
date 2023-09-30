@@ -12,8 +12,8 @@ const HTTP_STATUSES = {
   NOT_FOUND_404: 404
 }
 
-const jsonBodyMiddleware = express.json();
-app.use(jsonBodyMiddleware);
+// const jsonBodyMiddleware = express.json();
+// app.use(jsonBodyMiddleware);
 
 const db = {
   courses: [
