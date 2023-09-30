@@ -1,7 +1,17 @@
 import express from 'express';
 
 const app = express();
+const helmet = require('helmet');
 const port = process.env.PORT || 3000;
+
+app.use(
+  helmet.contentSecurityPolicy({
+    directives: {
+      defaultSrc: ["'self'"],
+      connectSrc: ["'self'", "https://deploy-demo-d4rl.vercel.app"],
+    },
+  })
+);
 
 
 const HTTP_STATUSES = {
